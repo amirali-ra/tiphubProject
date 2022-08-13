@@ -20,5 +20,6 @@ import home_app
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('account/', include('accounts_app.urls')),
     path('', include('home_app.urls'))
 ]

@@ -39,7 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     #my apps
-    'home_app.apps.HomeAppConfig'
+    'home_app.apps.HomeAppConfig',
+    'accounts_app.apps.AccountsAppConfig'
 ]
 
 MIDDLEWARE = [
@@ -73,6 +74,7 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'tiphubProject.wsgi.application'
 
+AUTH_USER_MODEL = 'accounts_app.Account'
 
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
