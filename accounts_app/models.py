@@ -33,8 +33,8 @@ class MyAccountManager(BaseUserManager):
 
 class Account(AbstractBaseUser, PermissionsMixin):
     email = models.EmailField(verbose_name='email', max_length=60, unique=True)
-    password = models.CharField(max_length=30)
-    password2 = models.CharField(max_length=30, null=True)
+    password = models.CharField(verbose_name='password', max_length=30)
+    password2 = models.CharField(verbose_name='password', max_length=30, null=True)
     phone_number = models.CharField(max_length=15, null=True)
     name = models.CharField(max_length=30)
     username = models.CharField(max_length=30, unique=True, null=True)
@@ -42,7 +42,7 @@ class Account(AbstractBaseUser, PermissionsMixin):
     is_admin = models.BooleanField(default=False)
     is_staff = models.BooleanField(default=False)
     is_superuser = models.BooleanField(default=False)
-    is_active = models.BooleanField(default=True)
+    is_active = models.BooleanField(default=False)
 
     USERNAME_FIELD = 'email'
     REQUIRED_FIELDS = ['password']

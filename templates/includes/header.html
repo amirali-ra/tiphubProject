@@ -43,9 +43,6 @@
                             </a>
                             <div class="dropdown-menu account-menu-items custom-bg"
                                  aria-labelledby="dropdownMenuButton">
-                                <a class="" href="{% url 'accounts:login' %}"> <i class=" fa fa-account"></i>
-                                    ورود</a>
-                                <a class="" href="{% url 'accounts:signup' %}"> ثبت نام</a>
                                 <a class="" href="user-panel.html"> پروفایل</a>
                                 <a class="" href="#"> مورد علاقه ها</a>
                                 <a class="" href="{% url 'accounts:logout' %}"> خروج</a>
@@ -143,7 +140,7 @@
                 <div class="bar3"></div>
             </div>
             <div class="logo">
-                <a href="index.html"><img src="{% static 'assets/image/logo.png' %}" class="logo-img img-fluid" alt=""/></a>
+                <a href="{% url 'home:home' %}"><img src="{% static 'assets/image/logo.png' %}" class="logo-img img-fluid" alt=""/></a>
             </div>
 
             <div class="d-flex align-items-center">
@@ -170,9 +167,9 @@
                         </a>
                         <div class="dropdown-menu account-menu-items custom-bg"
                              aria-labelledby="dropdownMenuButton">
-                            <a class="" href="login.html"> <i class=" fa fa-account"></i>
+                            <a class="" href="{% url 'accounts:login' %}"> <i class=" fa fa-account"></i>
                                 ورود</a>
-                            <a class="" href="register.html"> ثبت نام</a>
+                            <a class="" href="{% url 'accounts:signup' %}"> ثبت نام</a>
                             <a class="" href="user-panel.html"> پروفایل</a>
                             <a class="" href="#"> مورد علاقه ها</a>
                             <a class="" href="#"> خروج</a>

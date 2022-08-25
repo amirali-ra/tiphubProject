@@ -38,7 +38,10 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
-    #my apps
+    # third party apps
+
+
+    # my apps
     'home_app.apps.HomeAppConfig',
     'accounts_app.apps.AccountsAppConfig'
 ]
@@ -130,3 +133,12 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
+#Email Verify
+
+EMAIL_USE_TLS = True
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_USER = 'djangojays3@gmail.com'
+EMAIL_HOST_PASSWORD = 'nucjwkxkvnknepuy'
+EMAIL_PORT = 587
