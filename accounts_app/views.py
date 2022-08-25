@@ -78,3 +78,10 @@ def activate(request, uidb64, token):
 def userlogout(request):
     logout(request)
     return redirect('home:home')
+
+
+def userpanel(request):
+    if request.user.is_authenticated:
+        return render(request, 'accounts_app/user-panel.html')
+    else:
+        return redirect('accounts:login')
