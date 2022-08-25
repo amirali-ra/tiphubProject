@@ -22,5 +22,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('verification/', include('verify_email.urls')),
     path('account/', include('accounts_app.urls')),
+    path('post/', include('posts_app.urls')),
     path('', include('home_app.urls'))
 ]
